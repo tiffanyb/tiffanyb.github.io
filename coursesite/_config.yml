@@ -1,0 +1,13 @@
+title: Tiffany Bao
+description: ""
+baseurl: ""
+readingurl: "/reading/"
+slidesurl: "/slides/"
+url: "https://www.tiffanybao.com/" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+
+excerpt_separator: "<!--more-->"
+
+future: true

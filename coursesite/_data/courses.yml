@@ -1,0 +1,8 @@
+"cse591":
+  name: "CSE 591 Computer Security: Techniques and Tactics"
+  menu:
+    - title: "Lectures"
+      href: "lectures"
+
+    - title: "Policy"
+      href: "policy"
