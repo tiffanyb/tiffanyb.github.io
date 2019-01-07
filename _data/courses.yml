@@ -1,8 +1,10 @@
 "cse591":
   name: "CSE 591 Computer Security: Techniques and Tactics"
   menu:
-    - title: "Lectures"
-      href: "lectures"
+    - title: "Syllabus"
+      href: "syllabus"
 
     - title: "Policy"
       href: "policy"
+  staff: "Tiffany Bao, Gokul Krishna P"
+  url: "/cse591"

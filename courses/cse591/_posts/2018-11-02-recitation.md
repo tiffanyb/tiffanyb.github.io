@@ -1,5 +1,0 @@
----
-title: "No recitation"
-summary: >
----
-

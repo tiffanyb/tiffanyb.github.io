@@ -7,11 +7,36 @@ title: Policy
 
 ## Communication
 
-We will be using Piazza for discussions outside of class.
+We will be using Slack for discussions outside of class.
 Rather than emailing general questions to a professor or TA, we encourage you
-to [post your questions on Piazza](https://piazza.com/cmu/fall2018/18330),
+to ask your questions through [CSE591 Slack Group](https://join.slack.com/t/cse-591/shared_invite/enQtNTE3MDM5OTI2ODUyLTAzMzc1NGYzODQ2OTRlNmFjZWQ2MGRmZGI0NjQzZDE2ZTBlNGFkY2E2YzU3MTM3YjdmOGFlNjMyZTNhOTI4Mjc
+),
 so everyone can benefit from the answer and
 any discussions around it.  
+
+## Project Hand-ins
+
+For each project, you need to submit the following materials:
+
+- Reading List: “Reading List” in the **Google shared folder**
+
+- Presentation Slides: “Topic Presentation” in the **Google shared folder**
+
+- A multiple-choice question to the audience: Show it up during class
+
+- Presentation Slides: “Proposal Presentation” in the **Google shared folder**
+
+- Code repository: Create a reported under the **Github cse-591 group**)
+
+- Report Slides: “Report Presentation” in the **Google shared folder**)
+
+**Google Shared Folder**: Contact TA with your asu email account
+
+**Github Group**: Contact TA with you Github account
+
+## Bonus
+
+**You got a candy if you find a mistake from my course materials. :)**
 
 ## Grading
 
@@ -32,27 +57,25 @@ into a letter grade as follows:
 
 The total points possible are allocated as follows:
 
-- 35% Homework
-- 30% Exam 1
-- 30% Exam 2
-- 5% Class Participation
+- 30% Project 1
+- 30% Project 2
+- 30% Project 3
+- 10% Class Participation
 
-Note that there are three exams: we will drop your lowest exam score.
+The points for each project are allocated on the following metrics:
+
+- 5% Reading list
+- 5% Topic presentation
+- 5% Proposal presentation
+- 5% Project implementation
+- 5% Report presentation
+- 5% Demo
 
 Your participation score is based on your participation in class and
-recitation, in office hours, and/or in Piazza.  Being active in at least one of
+recitation, in office hours, and/or in Slack.  Being active in at least one of
 these venues will result in full points.  If you don't participate in any of
 them, then you will likely receive no points.
 
-
-## Late Days
-
-Late days interfere with the ability of course staff to quickly turn
-around assignment grades and solutions. The problem is we cannot give out
-solutions or graded assignments until everyone has turned in their work.
-Therefore, we only offer late days in emergency or exceptional circumstances,
-such as hospitalization. We do not offer late days for personal scheduling
-issues such as interviews, class load, etc.
 
 ## Ethics, and Cheating
 The course staff will treat all students ethically and fairly. We, in
@@ -63,7 +86,7 @@ points, as well as be immediately reported to the appropriate university
 disciplinary unit. Really. No matter what. The course staff looks at
 students who cheat or plagiarize as far beneath someone who fails the course.
 
-This course will follow [CMU’s policy on cheating and plagiarism](http://www.cmu.edu/academic-integrity/index.html).
+This course will follow [ASU’s Academic Integrity Policy](https://provost.asu.edu/academic-integrity).
 Note that the policy gives several examples of what constitutes cheating and plagiarism.
 If you have any questions, you should contact the instructors.
 
@@ -96,6 +119,6 @@ Take care of yourself.  Do your best to maintain a healthy lifestyle this semest
 
 All of us benefit from support during times of struggle. You are not alone. There are many helpful resources available on campus and an important part of the college experience is learning how to ask for help. Asking for support sooner rather than later is often helpful.
 
-If you or anyone you know experiences any academic stress, difficult life events, or feelings like anxiety or depression, we strongly encourage you to seek support. Counseling and Psychological Services (CaPS) is here to help: call 412-268-2922 and visit their [website](http://www.cmu.edu/counseling/). Consider reaching out to a friend, faculty or family member you trust for help getting connected to the support that can help.
+If you or anyone you know experiences any academic stress, difficult life events, or feelings like anxiety or depression, we strongly encourage you to seek support. [ASU Counseling Services](https://eoss.asu.edu/counseling) offers help 24/7. Consider reaching out to a friend, faculty or family member you trust for help getting connected to the support that can help.
 
 If you have questions about this or your coursework, please let us know.

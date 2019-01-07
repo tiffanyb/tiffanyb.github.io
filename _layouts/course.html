@@ -9,8 +9,8 @@
       <div class="wrapper">
         {% assign course_url = page.dir | split: "/" %}
         {% assign course_id = course_url[2] %}
-        {% assign course_name = site.data.courses[course_id].name %}
-        <a class="site-title" href="/courses/{{ course_id }}/">{{ course_name }}</a>
+        {% assign course = site.data.courses[course_id] %}
+        <a class="site-title" href="/courses/{{ course_id }}/"> {{ course.name }}</a>
         <nav class="site-nav">
           <a href="#" class="menu-icon menu.open">
             <svg viewBox="0 0 18 15">
@@ -22,7 +22,7 @@
           <div class="trigger">
             <h1>Main Navigation</h1>
             <ul class="menu">
-              {% for steve in site.data.courses[course_id].menu %}
+              {% for steve in course.menu %}
               <li>
                 {% if steve.subcategories != null %}
                 <a href="{{ steve.href }}" class="page-link">{{ steve.title }}</a>
@@ -48,7 +48,30 @@
       </div>
     </div>
 
-    {% include footer.html %}
+    <footer class="site-footer">
+      <div class="wrapper">
+
+        <div class="footer-col-wrapper">
+          <div class="footer-col  footer-col-1">
+            <ul class="contact-list">
+              <li><strong>{{ course.name }}</strong></li>
+            </ul>
+          </div>
+          <div class="footer-col  footer-col-2">
+             <p class="text">
+               <b>{{course.staff}}</b>
+             </p>
+          </div>
+          <div class="footer-col  footer-col-1">
+            <ul class="contact-list">
+              Ackknowledgement: Carolina Zarate and Zilin Jiang
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
   </body>
 
 </html>
