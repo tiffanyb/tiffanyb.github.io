@@ -5,8 +5,13 @@ title: Schedule
 
 <p>(Note this is a rough schedule and things are subject to change.)</p>
 
+
 {% assign course_url = page.dir | split: "/" %}
 {% assign course_id = course_url[2] %}
+{% assign courseurl = course_id | append: "/" %}
+
+{% assign templateurl = site.url | append: site.baseurl | append: "/courses/" | append: course_id | append: "/slides/CSE591Template.potx" %}
+<p>Course Template: <a href="{{ templateurl }}">{{course_id}}_template</a></p>
 
 <ul class="post-list">
   {% for post in site.categories[course_id] reversed %}
@@ -20,7 +25,6 @@ title: Schedule
 
   	{% if post.slides %}
   	&nbsp;|&nbsp;
-    {% assign courseurl = course_id | append: "/" %}
     {% assign slideurl = site.url | append: site.baseurl | append: "/courses/" | append: course_id | append: "/slides/" | append: post.slides %}
   	<a href="{{ slideurl }}">{{ post.slides }}</a>
   	{% endif %}
