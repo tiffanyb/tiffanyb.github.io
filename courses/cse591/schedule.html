@@ -34,12 +34,13 @@ title: Schedule
 
   	{% if post.reading %}
   	<hr style="height:6px; visibility:hidden;" />
-  	Reading:
+  	Seed:
   	<ul>
   		{% for reading in post.reading %}
   		<li>
   			{% if reading.file %}
-  				<a href="{{ reading.file | prepend: site.readingurl | prepend: site.baseurl | prepend: site.url }}">{{ reading.title }}</a>
+        {% assign readingurl = site.url | append: site.baseurl | append: "/courses/" | append: course_id | append: "/seeds/" | append: reading.file %}
+  				<a href="{{ readingurl }}">{{ reading.title }}</a>
   			{% else %}
   				<a href="{{ reading.url }}">{{ reading.title }}</a>
   			{% endif %}
