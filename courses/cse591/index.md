@@ -23,7 +23,7 @@ The expected learning outcomes include:
 
 ## Instructor
 
-**[Tiffany Bao](https://tiffanybao.com)**
+**[Tiffany Bao](https://www.tiffanybao.com)**
 
 ## Teaching Assistant
 
