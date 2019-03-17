@@ -27,7 +27,7 @@ The expected learning outcomes include:
 
 ## Teaching Assistant
 
-**Gokul Krishna P**, gpraveen@asu.edu
+**[Gokul Krishna P](https://www.deadsec.me)**, gpraveen@asu.edu
 
 ## Office Hours
 
