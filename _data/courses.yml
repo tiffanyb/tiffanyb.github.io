@@ -8,3 +8,14 @@
       href: "policy"
   staff: "Tiffany Bao, Gokul Krishna P"
   url: "/cse591"
+
+"cse545":
+  name: "CSE 545 Software Security F20"
+  menu:
+    - title: "Schedule"
+      href: "schedule"
+
+    - title: "Syllabus & Policy"
+      href: "policy"
+  staff: "Tiffany Bao"
+  url: "/cse545"

@@ -1,0 +1,63 @@
+---
+layout: page
+title: Schedule
+---
+
+<p>(Note this is a rough schedule and things are subject to change.)</p>
+
+
+{% assign course_url = page.dir | split: "/" %}
+{% assign course_id = course_url[2] %}
+{% assign courseurl = course_id | append: "/" %}
+
+{% assign templateurl = site.url | append: site.baseurl | append: "/courses/" | append: course_id | append: "/slides/CSE591Template.potx" %}
+<p>Course Template: <a href="{{ templateurl }}">{{course_id}}_template</a></p>
+
+<ul class="post-list">
+  {% for post in site.categories[course_id] reversed %}
+    <li>
+  	<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+  	<span style='font-variant: small-caps; font-weight:bold;'>{{ post.category }}</span>: <b>{{ post.title }}</b>
+  	{% if post.prof %}
+      (Instructor: {{ post.prof }})
+  	{% endif %}
+
+  	{% if post.slides %}
+  	&nbsp;|&nbsp;
+    {% assign slideurl = site.url | append: site.baseurl | append: "/courses/" | append: course_id | append: "/slides/" | append: post.slides %}
+  	<a href="{{ slideurl }}">{{ post.slides }}</a>
+  	{% endif %}
+
+  	<br/>
+  	{{ post.summary }}
+
+    <!--====== VIDEOS =====-->
+  	{% if post.videos %}
+  	<hr style="height:6px; visibility:hidden;" />
+    <b>Self-learning Videos:</b>
+  	<ul>
+  		{% for video in post.videos %}
+  		<li>
+        {{ video.title }} &nbsp;|&nbsp; <a href="{{ video.url }}">{{ video.url }}</a>
+  		</li>
+  		{% endfor %}
+  	</ul>
+  	{% endif %}
+
+    <!--====== BEFORE-CLASS VIDEOS  =====-->
+  	{% if post.before-videos %}
+  	<hr style="height:6px; visibility:hidden;" />
+    <b>In-class Lab Videos:</b>
+  	<ul>
+  		{% for video in post.before-videos %}
+  		<li>
+        {{ video.title }} &nbsp;|&nbsp; <a href="{{ video.url }}">{{ video.url }}</a>
+  		</li>
+  		{% endfor %}
+  	</ul>
+  	{% endif %}
+
+    </li>
+  {% endfor %}
+</ul>
