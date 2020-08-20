@@ -11,7 +11,6 @@ title: Schedule
 {% assign courseurl = course_id | append: "/" %}
 
 {% assign templateurl = site.url | append: site.baseurl | append: "/courses/" | append: course_id | append: "/slides/CSE591Template.potx" %}
-<p>Course Template: <a href="{{ templateurl }}">{{course_id}}_template</a></p>
 
 <ul class="post-list">
   {% for post in site.categories[course_id] reversed %}
@@ -48,7 +47,7 @@ title: Schedule
     <!--====== BEFORE-CLASS VIDEOS  =====-->
   	{% if post.before-videos %}
   	<hr style="height:6px; visibility:hidden;" />
-    <b>In-class Lab Videos:</b>
+    <b>In-class Videos:</b>
   	<ul>
   		{% for video in post.before-videos %}
   		<li>
