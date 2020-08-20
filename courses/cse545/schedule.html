@@ -36,7 +36,7 @@ title: Schedule
   	<hr style="height:6px; visibility:hidden;" />
     <b>Self-learning Videos:</b>
   	<ul>
-  		{% for video in post.videos %}
+  		{% for video in post.before-videos %}
   		<li>
         {{ video.title }} &nbsp;|&nbsp; <a href="{{ video.url }}">{{ video.url }}</a>
   		</li>
@@ -49,7 +49,7 @@ title: Schedule
   	<hr style="height:6px; visibility:hidden;" />
     <b>In-class Videos:</b>
   	<ul>
-  		{% for video in post.before-videos %}
+  		{% for video in post.videos %}
   		<li>
         {{ video.title }} &nbsp;|&nbsp; <a href="{{ video.url }}">{{ video.url }}</a>
   		</li>
