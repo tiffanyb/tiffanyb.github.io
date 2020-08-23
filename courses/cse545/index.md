@@ -20,7 +20,7 @@ I also hope that this course will help you write programs with less security bug
 
 **When:** Thursday, 10:00 - 11:15 AM
 
-**Where:** Online
+**Where:** [https://asu.zoom.us/j/99205624037](https://asu.zoom.us/j/99205624037)
 
 # Instructor
 
@@ -30,19 +30,19 @@ I also hope that this course will help you write programs with less security bug
 
 **[Zion Basque](https://www.zionbasque.com/)**, zbasque@asu.edu, @mahaloz
 
-**Zhuoer Lyu**, zlyu@asu.edu, @Zhuoer Lyu
+**Zhuoer Lyu**, zlyu15@asu.edu, @Zhuoer Lyu
 
 **Kyle Zeng**, zengyhkyle@gmail.com, @kylebot
 
 # Instructor Office Hours
 
-**When:** TBD
+**When:** Thursday, 9:00 - 10:00 AM
 
-**Where:** Online
+**Where:** [https://asu.zoom.us/j/99084307002 ](https://asu.zoom.us/j/99084307002)
 
 # TA Office Hours
 
 TBD
 
 # Announcement
-None
+Assignment 1 is out! Deadline: September 2nd, 11:59 PM PST
