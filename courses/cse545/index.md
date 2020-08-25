@@ -44,5 +44,5 @@ I also hope that this course will help you write programs with less security bug
 
 TBD
 
-# Announcement
-Assignment 1 is out! Deadline: September 2nd, 11:59 PM PST
+<!--# Announcement-->
+<!--Assignment 1 is out! Deadline: September 2nd, 11:59 PM PST-->
