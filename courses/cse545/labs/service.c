@@ -43,8 +43,10 @@ int validate(){
 
 void record(char id[15]){
   char path[50] = {};
+  FILE *fd;
   sprintf(path, "records/%s", id);
-  execv("touch", (char* const*) path);
+  fd = fopen(path, "w");
+  fclose(fd);
 }
 
 
@@ -57,7 +59,7 @@ int exist(char id[15]){
 void interaction(){
   int n;
   char *buf = NULL;
-  size_t size = 0;
+  size_t size = 0, len = 0;
   char asuid[15] = {};
   while(1){
     print_menu();
@@ -69,8 +71,8 @@ void interaction(){
         if (validate() == 1){
           printf("Your ASUID: ");
           fflush(stdout);
-          getline(&buf, &size, stdin);
-          buf[size] = '\0';
+          len = getline(&buf, &size, stdin);
+          buf[len] = '\0';
           record(buf);
           printf("You got it!\n");
         }
@@ -85,8 +87,8 @@ void interaction(){
       case PROB:
         printf("Your ASUID: ");
         fflush(stdout);
-        getline(&buf, &size, stdin);
-        buf[size] = '\0';
+        len = getline(&buf, &size, stdin);
+        buf[len] = '\0';
         if (exist(buf))
           printf("Your participation is already recorded\n");
         else
