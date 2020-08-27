@@ -1,17 +1,20 @@
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #define LOG 1
 #define EXIT 2
+#define PROB 3
 
-char menu[2][20] = {"Log Participation", "Exit"};
+char menu[3][50] = {"Log Participation", "Exit", "Check your participation"};
+
 
 void print_greeting(){
   printf("Welcome to CSE545 In-class Lab 1\n");
 }
 
 void print_menu(){
-  for (int i = 0; i < 2; i++)
+  for (int i = 0; i < 3; i++)
     printf("%d. %s\n", i + 1, menu[i]);
   printf("Please select from menu: ");
   fflush(stdout);
@@ -39,11 +42,17 @@ int validate(){
 
 
 void record(char id[15]){
-  char command[50] = {};
-  sprintf(command, "touch records/%s", id);
-  system(command);
+  char path[50] = {};
+  sprintf(path, "records/%s", id);
+  execv("touch", (char* const*) path);
 }
 
+
+int exist(char id[15]){
+  char path[50] = {};
+  sprintf(path, "records/%s", id);
+  return(access(path, F_OK) != -1);
+}
 
 void interaction(){
   int n;
@@ -60,8 +69,9 @@ void interaction(){
         if (validate() == 1){
           printf("Your ASUID: ");
           fflush(stdout);
-          scanf("%s", asuid);
-          record(asuid);
+          getline(&buf, &size, stdin);
+          buf[size] = '\0';
+          record(buf);
           printf("You got it!\n");
         }
         else{
@@ -72,6 +82,15 @@ void interaction(){
       case EXIT:
         printf("Bye!\n");
         return;
+      case PROB:
+        printf("Your ASUID: ");
+        fflush(stdout);
+        getline(&buf, &size, stdin);
+        buf[size] = '\0';
+        if (exist(buf))
+          printf("Your participation is already recorded\n");
+        else
+          printf("Your participation does not exist\n");
       default:
         printf("Wrong menu selection\n");
     }
