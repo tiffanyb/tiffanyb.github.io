@@ -18,10 +18,10 @@
     - title: "Syllabus & Policy"
       href: "policy"
 
-    #- title: "Assignments"
-      #subcategories:
-        #- subtitle: "Assignment 1 (due: 9/2 11:59pm)"
-          #subhref: "assignment1"
+    - title: "Assignments"
+      subcategories:
+        - subtitle: "Assignment 1 (due: 9/2 11:59pm)"
+          subhref: "assignment1"
         #- subtitle: "Assignment 1 (due: 9/2 11:59pm)"
           #subhref: "assignments/assignment1"
         #- subtitle: "Assignment 1 (due: 9/2 11:59pm)"
