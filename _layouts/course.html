@@ -25,7 +25,8 @@
               {% for steve in course.menu %}
               <li>
                 {% if steve.subcategories != null %}
-                <a href="{{ steve.href }}" class="page-link">{{ steve.title }}</a>
+                <!--<a href="{{ steve.href }}" class="page-link">{{ steve.title }}</a>-->
+                <p class="page-link">{{ steve.title }}</p>
                 <ul class="sub-menu">
                   {% for subcategory in steve.subcategories %}
                   <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
