@@ -72,7 +72,8 @@ void interaction(){
           printf("Your ASUID: ");
           fflush(stdout);
           len = getline(&buf, &size, stdin);
-          buf[len] = '\0';
+          if (len > 14) len = 14;
+          buf[len - 1] = '\0';
           record(buf);
           printf("You got it!\n");
         }
@@ -88,7 +89,8 @@ void interaction(){
         printf("Your ASUID: ");
         fflush(stdout);
         len = getline(&buf, &size, stdin);
-        buf[len] = '\0';
+        if (len > 14) len = 14;
+        buf[len - 1] = '\0';
         if (exist(buf))
           printf("Your participation is already recorded\n");
         else
