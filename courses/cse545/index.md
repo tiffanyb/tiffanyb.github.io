@@ -38,11 +38,13 @@ I also hope that this course will help you write programs with less security bug
 
 **When:** Thursday, 9:00 - 10:00 AM
 
-**Where:** [https://asu.zoom.us/j/99084307002 ](https://asu.zoom.us/j/99084307002)
+**Where:** [https://asu.zoom.us/j/99084307002](https://asu.zoom.us/j/99084307002)
 
 # TA Office Hours
 
-TBD
+**When:** Thursday, 11:30 AM - 1:30 PM
+
+**Where:** [https://asu.zoom.us/j/99084307002](https://asu.zoom.us/j/99084307002)
 
 # Announcement
 Assignment 1 is out! Deadline: September 2nd, 11:59 PM PST
