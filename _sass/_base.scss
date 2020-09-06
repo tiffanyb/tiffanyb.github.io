@@ -95,7 +95,7 @@ a {
 
    &:visited {
     /*    color: darken($brand-color, 15%); */
-    } 
+    }
 
     &:hover {
         color: $text-color;
@@ -133,7 +133,7 @@ code {
     font-size: 14px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
+    //background-color: #eef;
 }
 
 code {
@@ -212,8 +212,8 @@ a.tosu {
 color: #b00000;
 background: #f5f5f5;
 text-decoration: none;
- padding: 2px; 
- font-weight: 600; 
+ padding: 2px;
+ font-weight: 600;
 font-family: 'Capita', Georgia, serif;
 }
 

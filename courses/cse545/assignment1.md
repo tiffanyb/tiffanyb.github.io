@@ -33,7 +33,7 @@ And your task is the following:
    You can repeatly edit your form. We score by your last edits.
 
 
-## Question?
+## Questions?
 
-If you have question, please contact me or the TAs via Slack
+If you have any question, please contact me or the TAs via Slack
 `#assignment1-questions`
