@@ -22,6 +22,13 @@ can recognize your identity and grade your assignment.
 The service will also tell you the current score once you log in with your
 ASURITE.
 
+**Headsup:** Challenge `shift`, `caesar`, and `fib`'s outputs depend on the format string of function `printf`.
+Here are the format strings:
+
+`shift` : "%d"
+`caesar` : "%s"
+`fib` : "%d"
+
 ## Babykey
 
 In this part, you will reverse engineer the acutal Linux binaries in ELF format.
