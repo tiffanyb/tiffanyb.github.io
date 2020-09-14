@@ -3,7 +3,7 @@ layout: page
 title: "Assignment 2: The Reverse reenignE"
 ---
 
-## Deadline: Sep 17th, 11:59 PM PST
+## Deadline: ~~Sep 17th, 11:59 PM PST~~ Sep 20th, 11:59 PM PST
 
 In this assignment, you will play with the Linux ELF binaries.
 The goal is to reverse the ELF binaries, understand what it requires from you, and answer the questions or pass the check.
