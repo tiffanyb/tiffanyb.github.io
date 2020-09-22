@@ -38,7 +38,7 @@ title: Schedule
   	<br/>
   	{{ post.summary }}
 
-    <!--====== VIDEOS =====-->
+    <!--====== BEFORE-CLASS VIDEOS =====-->
   	{% if post.before-videos %}
   	<hr style="height:6px; visibility:hidden;" />
     <b>Self-learning Videos:</b>
@@ -51,14 +51,14 @@ title: Schedule
   	</ul>
   	{% endif %}
 
-    <!--====== BEFORE-CLASS VIDEOS  =====-->
+    <!--====== IN-CLASS VIDEOS  =====-->
   	{% if post.videos %}
   	<hr style="height:6px; visibility:hidden;" />
-    <b>In-class Videos:</b>
+    <b>In-class Video:</b>
   	<ul>
   		{% for video in post.videos %}
   		<li>
-        {{ video.title }} &nbsp;|&nbsp; <a href="{{ video.url }}">{{ video.url }}</a>
+        In-class Lab &nbsp;|&nbsp; <a href="{{ video.url }}">{{ video.url }}</a>
   		</li>
   		{% endfor %}
   	</ul>
