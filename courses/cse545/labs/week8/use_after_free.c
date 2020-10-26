@@ -30,11 +30,11 @@ void print_menu(){
     "4. [l]ist all pointers, e.g, l\n"};
 
   for(int i = 0; i < 6; i++)
-    fprintf(stderr, "%s", MENU[i]);
+    printf("%s", MENU[i]);
 }
 
 void act_malloc(int n){
-  fprintf(stderr, "Allocating %d bytes\n", n);
+  printf("Allocating %d bytes\n", n);
   ptrs[cnt] = malloc(n);
   used[cnt] = UNDERUSE;
   request_size[cnt] = n;
@@ -42,14 +42,14 @@ void act_malloc(int n){
 }
 
 void act_free(int n){
-  fprintf(stderr, "Freeing pointer %d: %p\n", n, ptrs[n]);
+  printf("Freeing pointer %d: %p\n", n, ptrs[n]);
   free(ptrs[n]);
   used[n] = FREED;
 }
 
 void act_edit(int n, char *s){
   // this is a overflow vulnerability that we will talk about in future classes
-  fprintf(stderr, "Editing pointer %d: %p\n", n, ptrs[n]);
+  printf("Editing pointer %d: %p\n", n, ptrs[n]);
   int l1 = strlen(ptrs[n]);
   int l2 = strlen(s);
   int l;
@@ -59,13 +59,13 @@ void act_edit(int n, char *s){
 }
 
 void list_ptrs(){
-  fprintf(stderr, "Index\tPointers\tRequested Size\tStatus\n");
+  printf("Index\tPointers\tRequested Size\tStatus\n");
   for (int i = 0; i < cnt; i++){
-    fprintf(stderr, "%d\t%p\t%u\t", i, ptrs[i], request_size[i]);
+    printf("%d\t%p\t%u\t", i, ptrs[i], request_size[i]);
     if (used[i] == UNDERUSE)
-      fprintf(stderr, "Under Use\n");
+      printf("Under Use\n");
     else if (used[i] == FREED)
-      fprintf(stderr, "Freed\n");
+      printf("Freed\n");
   }
 }
 
@@ -100,9 +100,10 @@ int main(){
   char buf[100];
   char str[100];
   int n;
-  setbuf(stderr, NULL);
+  setbuf(stdout, NULL);
   while (1){
     print_menu();
+    memset(buf, 0, 100);
     read(0, buf, 90);
     if (strstr(buf, MALLOC) || buf[0] == '1'){
       sscanf(buf + sizeof(MALLOC), "%d", &n);
