@@ -10,7 +10,7 @@ This in-class exercise has three learning objectives:
    3. If you do both the above and have extra time, experiment with using
       libfuzzer instead of afl.
 
-The fuzzing archive is at [exercise.tgz](https://tiffanybao.com/courses/cse545/labs/week12/exercise.tgz)
+**The fuzzing archive is at [exercise.tgz](https://www.tiffanybao.com/courses/cse545/labs/week12/exercise.tgz)**
 
 We will be using docker in this exercise. If you don't have docker installed on
 your machine, please head to [docker.com](https://docker.com) and install it
