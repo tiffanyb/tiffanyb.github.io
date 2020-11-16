@@ -52,6 +52,19 @@ title: Schedule
   	</ul>
   	{% endif %}
 
+    <!--====== BEFORE-CLASS PREPARATION  =====-->
+  	{% if post.before-class-setup %}
+  	<hr style="height:6px; visibility:hidden;" />
+    <b>Before-class Setup:</b>
+  	<ul>
+  		{% for item in post.before-class-setup %}
+  		<li>
+        {{ item.title }} &nbsp;|&nbsp; <a href="{{ item.url }}">{{ item.url }}</a>
+  		</li>
+  		{% endfor %}
+  	</ul>
+  	{% endif %}
+
     <!--====== IN-CLASS VIDEOS  =====-->
   	{% if post.videos %}
   	<hr style="height:6px; visibility:hidden;" />
