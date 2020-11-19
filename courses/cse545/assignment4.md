@@ -11,7 +11,7 @@ There are two waves in this assignment. The first one is regarding tcache, and t
 
 The challenges are at [http://asu-cse545.com](http://asu-cse545.com). Similar to Babykey in Assignment 2, your goal is to get the flag and submit to the website.
 
-**The first wave of the challenges is already available.** The second wave will be released soon.
+~~**The first wave of the challenges is already available.** The second wave will be released soon.~~ The second wave is available!
 
 
 ## Score Calculation

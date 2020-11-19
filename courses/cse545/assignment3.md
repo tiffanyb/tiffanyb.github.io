@@ -13,7 +13,7 @@ assignment.
 
 The challenges are at [http://asu-cse545.com](http://asu-cse545.com). Similar to Babykey in Assignment 2, your goal is to get the flag and submit to the website.
 
-**The first wave of the challenges (Babystack) is already available.** The second wave is on the way. ;)
+~~**The first wave of the challenges (Babystack) is already available.** The second wave is on the way. ;)~~ The second wave is available!
 
 
 ## Score Calculation
