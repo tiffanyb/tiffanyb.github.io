@@ -1,0 +1,191 @@
+* Harnessing Lab
+
+** docker run
+Run the docker image with:
+#+begin_src shell
+docker run -ti -v `pwd`:/mnt dbrumley/asu-fuzzing-2020
+#+end_src
+
+Then go to the /mnt directory
+
+** AFL
+
+Go to the ~afl-example~ directory. Your goal is to compile and fuzz this with
+AFL.  If you need help, read the documentation for AFL at
+https://github.com/google/AFL.
+ 
+
+*** AFL Solution
+
+Pretty simple: 
+  1. Compile with ~CC=afl-gcc make~
+  2. Create the ~in~ and ~out~ directories
+  3. Put ~good.txt~ in the ~in~ directory
+  4. Run AFL with ~afl-fuzz -i in -o out ./testme @@~
+
+The ~@@~ means "Run the program with the fuzzer-created file in the position of
+"@@"
+
+#+begin_src shell
+CC=afl-gcc make
+mkdir in out
+cp good.txt in
+afl-fuzz -i in -o out ./harness @@
+#+end_src
+
+
+To inspect the crashes, look in ~out/crashes~. You can run ~testme~ on a crash
+with:
+#+begin_src shell
+./testme out/crashes/<name>
+#+end_src
+
+How would you use this information?  Well, one obvious next step if you were
+unfamiliar with the program is to use ~gdb~.
+#+begin_src shell
+apt-get update && apt-get install gdb
+gdb ./testme
+(gdb) set args out/crashes/id:000000,sig:04,src:000003,op:arith8,pos:2,val:-11
+(gdb) run
+#+end_src
+
+** XML Harness
+
+Go to ~/mnt/tinyxml2~. In this exercise, you'll write a *harness*. The goal is
+to fill out ~harness.cpp~, compile with AFL, fuzz, and find a bug.
+
+When doing this, think about what the XML library should be doing. It takes an
+input, and parses that into an XML.  A good initial place for fuzzing is
+creating different files.
+
+*** XML AFL Solution
+
+First, the harness:
+
+    #+begin_src C 
+// harness.cpp
+#include "tinyxml2.h"
+using namespace tinyxml2;
+
+int main(int argc, char **argv)
+{
+    XMLDocument doc;
+    doc.LoadFile( argv[1] );
+    doc.Print();
+    int errorID = doc.ErrorID();
+
+    return errorID;
+} 
+    #+end_src
+
+
+Second, compile to make an AFL-instrumented ~harness~
+#+begin_src shell
+CXX=afl-g++ make
+#+end_src
+
+Third, create the input and output directories:
+#+begin_src shell
+mkdir in out 
+cp resources/utf8test.xml in
+afl-fuzz -i in -o out ./harness @@ 
+#+end_src
+
+Once you run it for about 1:30, you'll see a crash. Again, let's inspect it:
+
+#+begin_src shell
+gdb ./harness
+(gdb) set args out/crashes/id:000000,sig:11,src:000000,op:flip1,pos:582
+(gdb) r
+#+end_src
+
+Your crash is (likely) in ~tinyxml2::StrPair::GetStr~
+
+*** Extension 1: Turning on non-default options
+
+After you find the basic crash, you can investigate other ways to fuzz.  For
+example, the ~XMLDocument~ constructor takes options.
+
+You can try with different options. For example, try changing the harness to
+have:
+#+begin_src C
+    XMLDocument doc(true, COLLAPSE_WHITESPACE);
+#+end_src
+
+Use a different seed. We've included  ~resources/whitespace-test.xml~. 
+
+#+begin_src XML
+<a> This
+    is &apos;  text  &apos; </a>
+<b>  This is &apos; text &apos;
+</b>
+<c>This  is  &apos;
+
+    text &apos;</c>
+</element>
+#+end_src
+
+This should expand the code you see yourself hitting with fuzzing.
+
+*** XML libfuzzer solution
+
+Libfuzzer is an in-memory fuzzer.  A good place to look when first getting
+started with libfuzzer is http://llvm.org/docs/LibFuzzer.html#toy-example.
+
+For libfuzzer, we need to write a new harness.  It needs to fit:
+#+begin_src C
+extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size) {
+  DoSomethingInterestingWithMyAPI(Data, Size);
+  return 0;  // Non-zero return values are reserved for future use.
+}
+#+end_src
+
+We'll do that here. We need to look at tinyxml2 again, and find a function where
+instead of loading from a file, it parses from a byte array.  The function
+~Parse(data, size)~ is exactly what we're looking for.
+
+We write a new harness:
+#+begin_src C
+
+#include <unistd.h>
+#include <fcntl.h>
+#include <stdint.h> // New for libfuzzer. Needed for uint8_t. 
+#include "tinyxml2.h"
+
+using namespace tinyxml2;
+
+extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size){
+  // Your code goes here.
+  // TODO: Instantiate an XML objective
+  // TODO: Parse content of argv[1] into XML object.
+  //       (Hint: look for a function with "Load" in the name)
+  // TODO: Print the XML object
+  XMLDocument doc;
+  doc.Parse((const char *) data, size);
+  doc.Print();
+
+  return 0;
+}
+#+end_src
+
+To compile, we take our hint from the libfuzzer webpage:
+#+begin_src shell
+clang++ -fsanitize=address,fuzzer libfuzzer_harness.cpp tinyxml2.cpp tinyxml2.h 
+#+end_src
+
+Libfuzzer works a bit different than AFL.  It still can take in an input corpus
+directory, but no output directory.  We'll do this with ~utf8test.xml~ again.
+
+#+begin_src shell
+mkdir in
+cp resources/utf8test.xml in
+./a.out in
+#+end_src
+
+We see a crash produced.  To investigate this, you may be tempted to build a
+separate harness without libfuzzer. Luckily, this isn't needed.  With a little
+research, we find we can turn off ASAN.
+
+#+begin_src shell
+ASAN_OPTIONS=abort_on_error=1 gdb --args ./a.out crash-8004de64ea79bad519e8d778179bf981df873f0d
+#+end_src
