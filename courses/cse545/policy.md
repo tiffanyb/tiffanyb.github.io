@@ -80,6 +80,17 @@ We translate a percentage into a letter grade as follows:
 
 We may adjust the letter grade based on the score distribution.
 
+## Y Grade
+
+Per ASU Policy: Y grades will satisfy C minimum requirements. However, grad students still need B grades in the following:
+
+* Deficiency courses
+* Core/Area courses
+* Portfolio courses (except RAS-AI students)
+* Culminating experience courses
+
+If you want to request a Y grade, please contact the instructor.
+
 # Ethics, and Cheating
 
 The course staff will treat all students ethically and fairly. We, in
