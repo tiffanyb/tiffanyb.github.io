@@ -1,0 +1,111 @@
+
+- title: "Favocado: Fuzzing Binding Code of JavaScript Engines Using Semantically Correct Test Cases."
+  author: Sung Ta Dinh, Haehyun Cho, Kyle Martin, Adam Oest, Yihui Zeng, Alexandros Kapravelos, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn.
+  publisher: "To appear in the Network and Distributed System Security Symposium (NDSS '21)"
+  year: 2021
+  #artifacts:
+    #- name: paper
+      #location: paper/xx
+    #- name: slides
+      #location: slides/xx 
+    #- name: talk
+      #url: www.youtube.com/
+
+- title: "CrawlPhish: Large-scale Analysis of Client-side Cloaking Techniques in Phishing."
+  author: Penghui Zhang, Adam Oest, Haehyun Cho, Zhibo Sun, RC Johnson, Brad Wardman, Shaown Sarker, Alexandros Kapravelos, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn.
+  publisher: "To appear in Proceedings of the 42th IEEE Symposium on Security and Privacy (Oakland '21)"
+  year: 2021
+  #artifacts:
+    #- name: paper
+      #location: paper/xx
+    #- name: slides
+      #location: slides/xx 
+    #- name: talk
+      #url: www.youtube.com/
+
+- title: "Having Your Cake and Eating It: An Analysis of Concession-Abuse-as-a-Service"
+  author: Zhibo Sun, Adam Oest, Penghui Zhang, Carlos Rubio-Medrano, Tiffany Bao, Ruoyu Wang, Ziming Zhao, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn.
+  publisher: "To appear in the 30th USENIX Security Symposium (USENIX '21)"
+  year: 2021
+  #artifacts:
+    #- name: paper
+      #location: paper/xx
+    #- name: slides
+      #location: slides/xx 
+    #- name: talk
+      #url: www.youtube.com/
+
+- title: "Cyber Autonomy in Software Security: Techniques and Tactics (Book Chapter)"
+  author: Tiffany Bao, Yan Shoshitaishvili
+  publisher: "Game Theory and Machine Learning for Cyber Security (Publisher: Wiley)"
+  year: 2021
+  artifacts:
+    - name: book
+      url: https://books.google.ca/books/about/Game_Theory_and_Machine_Learning_for_Cyb.html?id=EBxszQEACAAJ&redir_esc=y
+
+- title: "HoneyPLC: A Next-Generation Honeypot for Industrial Control Systems."
+  author: Efrén López-Morales, Carlos Rubio-Medrano, Adam Doupé, Yan Shoshitaishvili, Ruoyu Wang, Tiffany Bao, Gail-Joon Ahn.
+  publisher: "Proceedings of the 2020 ACM SIGSAC Conference on Computer and Communications Security (CCS '20)"
+  year: 2020
+  artifacts:
+    - name: paper
+      location: paper/honeyplc2020.pdf
+    - name: code
+      url: https://github.com/sefcom/honeyplc
+
+- title: "Not All Coverage Measurements Are Equal: Fuzzing by Coverage Accounting for Input Prioritization."
+  author: Yanhao Wang, Xiangkun Jia, Yuwei Liu, Kyle Zeng, Tiffany Bao, Dinghao Wu, Purui Su.
+  publisher: "The Network and Distributed System Security Symposium (NDSS '20)"
+  year: 2020
+  artifacts:
+    - name: paper
+      location: paper/tortoise2020.pdf
+    - name: slides
+      location: slides/tortoise2020_slides.pdf
+    - name: talk
+      url: https://youtu.be/Fud0v0ppCOo
+    - name: code
+      url: https://github.com/TortoiseFuzz/TortoiseFuzz
+
+- title: "Matched and Mismatched SOCs: A Qualitative Study on Security Operations Center Issues."
+  author: Faris Bugra Kokulu, Ananta Soneji, Tiffany Bao, Yan Shoshitaishvili, Ziming Zhao, Adam Doupe, and Gail-Joon Ahn.
+  publisher: "Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Security (CCS '19)"
+  year: 2019
+  artifacts:
+    - name: paper
+      location: paper/Kokulu2019.pdf
+
+- title: "Your Exploit is Mine: Automatic Shellcode Transplant for Remote Exploits."
+  author: Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, and David Brumley.
+  publisher: "Proceedings of the 38th IEEE Symposium on Security and Privacy (Oakland '17)"
+  year: 2017
+  artifacts:
+    - name: paper
+      location: paper/bao2017.pdf
+    - name: slides
+      location: slides/bao2017.pptx
+    - name: talk
+      url: https://youtu.be/QXSHy9qpc9A
+
+- title: "How Shall We Play a Game: A Game-theoretical Model for Cyber-warfare Games."
+  author: Tiffany Bao, Yan Shoshitaishvili, Ruoyu Wang, Christopher Kruegel, Giovanni Vigna and David Brumley.
+  publisher: "Proceedings of the 30th IEEE Computer Security Foundations Symposium (CSF '17)"
+  award: "The NSA's Annual Best Scientific Paper Award"
+  year: 2017
+  artifacts:
+    - name: paper
+      location: paper/bao2017csf.pdf
+    - name: slides
+      location: slides/bao2017csf.pptx
+
+- title: "ByteWeight: Learning to Recognize Functions in Binary Code."
+  author: Tiffany Bao, Jonathan Burket, Maverick Woo, Rafael Turner, and David Brumley.
+  publisher: "Proceedings of the 23rd USENIX Security Symposium (USENIX '14)"
+  year: 2014
+  artifacts:
+    - name: paper
+      location: paper/byteweight2014.pdf
+    - name: slides
+      location: slides/byteweight2014_slides 
+    - name: code
+      url: http://security.ece.cmu.edu/byteweight

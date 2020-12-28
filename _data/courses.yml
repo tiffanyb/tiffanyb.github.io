@@ -1,34 +1,21 @@
-"cse591":
-  name: "CSE 591 Computer Security: Techniques and Tactics"
-  menu:
-    - title: "Schedule"
-      href: "schedule"
+- id: CSE365
+  title: Introduction to Information Assurance
+  date: 2021 Spring
+  url: tbd
 
-    - title: "Policy"
-      href: "policy"
-  staff: "Tiffany Bao, Gokul Krishna P"
-  url: "/cse591"
+- id: CSE545
+  title: Software Security
+  url: https://cse545.tiffanybao.com
+  date: 2020 Fall
 
-"cse545":
-  name: "CSE 545 Software Security F20"
-  menu:
-    - title: "Schedule"
-      href: "schedule"
+- id: CSE545 Online
+  title: Software Security
+  date: 2020 Spring
+  url: https://www.coursera.org/degrees/master-of-computer-science-asu/academics
 
-    - title: "Syllabus & Policy"
-      href: "policy"
+- id: CSE591
+  title: "Software Security: Techinques and Tactics"
+  url: https://cse591.tiffanybao.com
+  date: 2019 Spring
 
-    - title: "Assignments"
-      subcategories:
-        - subtitle: "Assignment 1 (due: 9/2 11:59pm)"
-          subhref: "assignment1"
-        - subtitle: "Assignment 2 (due: 9/20 11:59pm)"
-          subhref: "assignment2"
-        - subtitle: "Assignment 3 (due: 10/31 11:59pm)"
-          subhref: "assignment3"
-        - subtitle: "Assignment 4 (due: 11/25 11:59pm)"
-          subhref: "assignment4"
-        #- subtitle: "Assignment 1 (due: 9/2 11:59pm)"
-          #subhref: "assignments/assignment1"
-  staff: "Tiffany Bao"
-  url: "/cse545"
+

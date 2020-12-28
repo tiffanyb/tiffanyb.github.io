@@ -1,0 +1,20 @@
+- name: "Me & Research"
+  location: "research.html"
+
+- name: "Publications"
+  location: "publications.html"
+
+- name: "Teaching"
+  location: "teaching.html"
+
+#- name: "Service"
+  #location: "service.html"
+
+- name: "Curriculum Vitae"
+  location: "cv.pdf"
+
+- name: Student Hiring
+  location: hiring.html
+
+- name: Youtube
+  url: https://www.youtube.com/channel/UCzKrPYj9UWM29Myu5h5ha-g
