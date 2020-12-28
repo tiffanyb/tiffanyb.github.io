@@ -16,7 +16,11 @@ title: Blog
 				 </div>
 				 <div class="col-sm-8 col-md-8 col-lg-8">
 					 <h5 style="text-align: left">
+             {% if c.url != null %}
              <strong><a href="{{ c.url }}">{{ c.id }}: {{ c.title }}</a></strong>
+             {% else %}
+             <strong>{{ c.id }}: {{ c.title }}</a></strong>
+             {% endif %}
 					 </h5>
 				 </div>
 			</div>
