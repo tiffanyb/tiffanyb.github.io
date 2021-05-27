@@ -27,7 +27,7 @@
   author: Sung Ta Dinh, Haehyun Cho, Kyle Martin, Adam Oest, Yihui Zeng, Alexandros Kapravelos, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn.
   publisher: "The Network and Distributed System Security Symposium (NDSS '21)"
   year: 2021
-  #artifacts:
+  artifacts:
     - name: paper
       location: paper/favocado.pdf
     #- name: slides
