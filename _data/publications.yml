@@ -34,6 +34,8 @@
       #location: slides/xx 
     - name: talk
       url: https://youtu.be/xywq1ZgsxVY
+    - name: code
+      url: https://github.com/favocado/Favocado
 
 - title: "Cyber Autonomy in Software Security: Techniques and Tactics (Book Chapter)"
   author: Tiffany Bao, Yan Shoshitaishvili
