@@ -1,28 +1,3 @@
-
-- title: "Favocado: Fuzzing Binding Code of JavaScript Engines Using Semantically Correct Test Cases."
-  author: Sung Ta Dinh, Haehyun Cho, Kyle Martin, Adam Oest, Yihui Zeng, Alexandros Kapravelos, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn.
-  publisher: "To appear in the Network and Distributed System Security Symposium (NDSS '21)"
-  year: 2021
-  #artifacts:
-    #- name: paper
-      #location: paper/xx
-    #- name: slides
-      #location: slides/xx 
-    #- name: talk
-      #url: www.youtube.com/
-
-- title: "CrawlPhish: Large-scale Analysis of Client-side Cloaking Techniques in Phishing."
-  author: Penghui Zhang, Adam Oest, Haehyun Cho, Zhibo Sun, RC Johnson, Brad Wardman, Shaown Sarker, Alexandros Kapravelos, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn.
-  publisher: "To appear in Proceedings of the 42th IEEE Symposium on Security and Privacy (Oakland '21)"
-  year: 2021
-  #artifacts:
-    #- name: paper
-      #location: paper/xx
-    #- name: slides
-      #location: slides/xx 
-    #- name: talk
-      #url: www.youtube.com/
-
 - title: "Having Your Cake and Eating It: An Analysis of Concession-Abuse-as-a-Service"
   author: Zhibo Sun, Adam Oest, Penghui Zhang, Carlos Rubio-Medrano, Tiffany Bao, Ruoyu Wang, Ziming Zhao, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn.
   publisher: "To appear in the 30th USENIX Security Symposium (USENIX '21)"
@@ -34,6 +9,31 @@
       #location: slides/xx 
     #- name: talk
       #url: www.youtube.com/
+
+- title: "CrawlPhish: Large-scale Analysis of Client-side Cloaking Techniques in Phishing."
+  author: Penghui Zhang, Adam Oest, Haehyun Cho, Zhibo Sun, RC Johnson, Brad Wardman, Shaown Sarker, Alexandros Kapravelos, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn.
+  publisher: "Proceedings of the 42th IEEE Symposium on Security and Privacy (Oakland '21)"
+  year: 2021
+  award: "Best Student Paper Award"
+  artifacts:
+    - name: paper
+      location: paper/crawlphish2021.pdf
+    #- name: slides
+      #location: slides/xx 
+    - name: talk
+      url: https://youtu.be/IJSFIvWDck4
+
+- title: "Favocado: Fuzzing Binding Code of JavaScript Engines Using Semantically Correct Test Cases."
+  author: Sung Ta Dinh, Haehyun Cho, Kyle Martin, Adam Oest, Yihui Zeng, Alexandros Kapravelos, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn.
+  publisher: "The Network and Distributed System Security Symposium (NDSS '21)"
+  year: 2021
+  #artifacts:
+    - name: paper
+      location: paper/favocado.pdf
+    #- name: slides
+      #location: slides/xx 
+    - name: talk
+      url: https://youtu.be/xywq1ZgsxVY
 
 - title: "Cyber Autonomy in Software Security: Techniques and Tactics (Book Chapter)"
   author: Tiffany Bao, Yan Shoshitaishvili
