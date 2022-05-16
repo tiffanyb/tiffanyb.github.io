@@ -32,8 +32,8 @@
   artifacts:
     - name: paper
       location: paper/peerreview2022.pdf
-    - name: preview
-      url: https://www.youtube.com/watch?v=mN-2H37xjS8
+    #- name: preview
+      #url: https://www.youtube.com/watch?v=mN-2H37xjS8
 
 - title: "Having Your Cake and Eating It: An Analysis of Concession-Abuse-as-a-Service"
   author: Zhibo Sun, Adam Oest, Penghui Zhang, Carlos Rubio-Medrano, Tiffany Bao, Ruoyu Wang, Ziming Zhao, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn.
