@@ -1,14 +1,52 @@
+
+- title: "Playing for K(H)eaps: Understanding and Improving Linux Kernel Exploit Reliability"
+  author: Kyle Zeng, Yueqi Chen, Haehyun Cho, Xinyu Xing, Adam Doupé, Yan Shoshitaishvili, Tiffany Bao.
+  publisher: "The 31st USENIX Security Symposium (USENIX '22)"
+  year: 2022
+  artifacts:
+    - name: paper
+      location: paper/kheaps2022.pdf
+    - name: code
+      url: https://github.com/sefcom/KHeaps
+
+- title: "Arbiter: Bridging the Static and Dynamic Divide in Vulnerability Discovery on Binary Programs"
+  author: Jayakrishna Vadayath, Moritz Eckert, Kyle Zeng, Nicolaas Weideman, Gokulkrishna Praveen Menon, Yanick Fratantonio, Davide Balzarotti, Adam Doupé, Tiffany Bao, Ruoyu Wang, Christophe Hauser, Yan Shoshitaishvili.
+  publisher: "The 31st USENIX Security Symposium (USENIX '22)"
+  year: 2022
+  artifacts:
+    - name: paper
+      location: paper/arbiter2022.pdf
+
+- title: "Expected Exploitability: Predicting the Development of Functional Vulnerability Exploits"
+  author: Octavian Suciu, Connor Nelson, Zhuoer Lyu, Tiffany Bao, Tudor Dumitras.
+  publisher: "The 31st USENIX Security Symposium (USENIX '22)"
+  year: 2022
+  artifacts:
+    - name: paper
+      location: paper/exploitability2022.pdf
+
+- title: "\"Flawed, but like democracy we don't have a better system\": The Experts' Insights on the Peer Review Process of Evaluating Security Papers"
+  author: Ananta Soneji, Faris Bugra Kokulu, Carlos Rubio-Medrano, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupe.
+  publisher: "Proceedings of the IEEE Symposium on Security and Privacy (Oakland '22)"
+  year: 2022
+  artifacts:
+    - name: paper
+      location: paper/peerreview2022.pdf
+    - name: preview
+      url: https://www.youtube.com/watch?v=mN-2H37xjS8
+
 - title: "Having Your Cake and Eating It: An Analysis of Concession-Abuse-as-a-Service"
   author: Zhibo Sun, Adam Oest, Penghui Zhang, Carlos Rubio-Medrano, Tiffany Bao, Ruoyu Wang, Ziming Zhao, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn.
-  publisher: "To appear in the 30th USENIX Security Symposium (USENIX '21)"
+  publisher: "The 30th USENIX Security Symposium (USENIX '21)"
   year: 2021
-  #artifacts:
-    #- name: paper
-      #location: paper/xx
-    #- name: slides
+  artifacts:
+    - name: paper
+      location: paper/concessionabuse2022.pdf
+    - name: slides
+      url: https://www.usenix.org/system/files/sec21_slides_sun-zhibo_0.pdf
       #location: slides/xx 
-    #- name: talk
-      #url: www.youtube.com/
+    - name: talk
+      url: https://youtu.be/SfKVsWLv0tA
 
 - title: "CrawlPhish: Large-scale Analysis of Client-side Cloaking Techniques in Phishing."
   author: Penghui Zhang, Adam Oest, Haehyun Cho, Zhibo Sun, RC Johnson, Brad Wardman, Shaown Sarker, Alexandros Kapravelos, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn.
@@ -29,7 +67,7 @@
   year: 2021
   artifacts:
     - name: paper
-      location: paper/favocado.pdf
+      location: paper/favocado2021.pdf
     #- name: slides
       #location: slides/xx 
     - name: talk
