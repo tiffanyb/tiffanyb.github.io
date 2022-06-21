@@ -1,0 +1,511 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTE: If you find that it says                                     %%
+%%                                                                    %%
+%%                           1 of ??                                  %%
+%%                                                                    %%
+%% at the bottom of your first page, this means that the AUX file     %%
+%% was not available when you ran LaTeX on this source. Simply RERUN  %%
+%% LaTeX to get the ``??'' replaced with the number of the last page  %%
+%% of the document. The AUX file will be generated on the first run   %%
+%% of LaTeX and used on the second run to fill in all of the          %%
+%% references.                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[11pt]{article}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+
+% Simpler bibsection for CV sections
+% (thanks to natbib for inspiration)
+
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=1.2in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=1in,               % 1 inch margins
+            includemp]{geometry}
+
+%% Use these lines for A4-sized paper
+%\usepackage[paper=a4paper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=30.5mm,    % Length of section titles
+%            marginparsep=1.5mm,       % Space between titles and text
+%            margin=25mm,              % 25mm margins
+%            includemp]{geometry}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+%% Set line spacing
+\linespread{1.2}
+
+%% This gives us fun enumeration environments. compactitem will be nice.
+\usepackage{paralist}
+%% Reference the last page in the page number
+%
+% NOTE: comment the +LP line and uncomment the -LP line to have page
+%       numbers without the ``of ##'' last page reference)
+%
+% NOTE: uncomment the \pagestyle{empty} line to get rid of all page
+%       numbers (make sure includefoot is commented out above)
+%
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+%
+% Usage: \makeheading{name}
+%
+% Place at top of document. It should be the first thing.
+\newcommand{\makeheading}[1]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+                {\Large \bfseries #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+% The section headings
+%
+% Usage: \section{section name}
+%
+% Follow this section IMMEDIATELY with the first line of the section
+% text. Do not put whitespace in between. That is, do this:
+%
+%       \section{My Information}
+%       Here is my information.
+%
+% and NOT this:
+%
+%       \section{My Information}
+%
+%       Here is my information.
+%
+% Otherwise the top of the section header will not line up with the top
+% of the section. Of course, using a single comment character (%) on
+% empty lines allows for the function of the first example with the
+% readability of the second example.
+\renewcommand{\section}[2]%
+        {\pagebreak[2]\vspace{\baselineskip}%
+         \phantomsection\addcontentsline{toc}{section}{#1}%
+         \hspace{0in}%
+         \marginpar{
+         \raggedright \scshape #1}#2}
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1]}{\end{itemize}%
+         \vspace{-0.8\baselineskip}}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\vspace{-\baselineskip}\begin{list}{#1}{%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{compactitem}[#1]}{\end{compactitem}}
+
+% An environment IDENTICAL to innerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{loneinnerlist}[1][\enskip\textbullet]%
+        {\vspace{-\baselineskip}\begin{compactitem}[#1]}
+        {\end{compactitem}\vspace{-.6\baselineskip}}
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[2]}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\makeheading{Tiffany Bao}
+
+\section{Contact Information}
+%
+% NOTE: Mind where the & separators and \\ breaks are in the following
+%       table.
+%
+% ALSO: \rcollength is the width of the right column of the table
+%       (adjust it to your liking; default is 1.85in).
+%
+%\newlength{\rcollength}\setlength{\rcollength}{1in}%
+%
+%\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
+699 South Mill Avenue \\
+Arizona State University  \\
+Tempe, AZ 85281 \\
+Email: \href{mailto:tbao@asu.edu}{\tt{tbao@asu.edu}}
+%Website: \url{https://users.ece.cmu.edu/~youzhib}
+%\end{tabular}
+
+\section{Professional Appointments}
+\textbf{Assistant Professor, Arizona State University}
+\hfill{2018 -- present}\\
+
+%\section{Research Interests}
+%
+%Binary Analysis, Software Security and Security Economics.
+
+%\blankline
+
+%%%%%%%%%%%%%%%%%%%
+%%%% Education %%%%
+%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+%
+\textbf{Doctor of Philosophy, Carnegie Mellon University}
+\hfill{2012 -- 2018}
+\begin{outerlist}
+\item[] Department of Electrical and Computer
+    Engineering \\
+\end{outerlist}
+
+%\blankline
+
+%\textbf{Bachelor of Science, Peking University}
+%\hfill{2008 -- 2012}
+%\begin{outerlist}
+%\item[] School of Electrical Engineering \& Computer Science \\
+    %Department of Computer Science
+%\end{outerlist}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Publication List %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publications}
+Expected Exploitability: Predicting the Development of Functional Vulnerability Exploits. \\
+Octavian Suciu, Connor Nelson, Zhuoer Lyu, and Tiffany Bao, Tudor Dumitra\c{s}. \\
+To appear in \emph{the 31th USENIX Security Symposium (USENIX '22)}.
+\\\\
+Favocado: Fuzzing Binding Code of JavaScript Engines Using Semantically Correct Test Cases. \\
+Sung Ta Dinh, Haehyun Cho, Kyle Martin, Adam Oest, Yihui Zeng, Alexandros Kapravelos, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn. \\
+In \emph{Network and Distributed System Security Symposium (NDSS '21)}.
+\\\\
+Having Your Cake and Eating It: An Analysis of Concession-Abuse-as-a-Service \\
+Zhibo Sun, Adam Oest, Penghui Zhang, Carlos Rubio-Medrano, Tiffany Bao, Ruoyu Wang, Ziming Zhao, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn. \\
+In \emph{the 30th USENIX Security Symposium (USENIX '21)}.
+\\\\
+CrawlPhish: Large-scale Analysis of Client-side Cloaking Techniques in Phishing. \\
+Penghui Zhang, Adam Oest, Haehyun Cho, Zhibo Sun, RC Johnson, Brad Wardman, Shaown Sarker, Alexandros Kapravelos, 
+Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn. \\
+In \emph{Proceedings of the IEEE Symposium on Security and Privacy (Oakland '21)}.
+\\\\
+SyML: Guiding Symbolic Execution Toward Vulnerable States Through Pattern Learning. \\
+Nicola Ruaro, Kyle Zeng, Lukas Dresel, Mario Polino, Tiffany Bao, Andrea Continella, Stefano Zanero, Christopher Kruegel, Giovanni Vigna. \\
+In \emph{the 24th International Symposium on Research in Attacks, Intrusions and Defenses (RAID '21)}.
+\\\\
+SoK: Everything You Ever Wanted to Know About Bitcoin Mixers (But Were Afraid to Ask) \\
+Jaswant Pakki, Yan Shoshitaishvili, Ruoyu Wang, Tiffany Bao, Adam Doupé. \\
+In \emph{Financial Cryptography and Data Security (FC '21)}.
+\\\\
+MuTent: Dynamic Android Intent Protection with Ownership-Based Key Distribution and Security Contracts. \\
+Pradeep Kumar Duraisamy Soundrapandian, Jaejong Baek, Tiffany Bao, Yan Shoshitaishvili, Adam Doupé, Ruoyu Wang, Gail-Joon Ahn. \\
+In \emph{Hawaii International Conference on System Sciences (HICCS '21)}. \\
+\textbf{Best Minitrack Paper Award}.
+\\\\
+HoneyPLC: A Next-Generation Honeypot for Industrial Control Systems \\
+Efren L\'{o}pez-Morale, Carlos Rubio-Medrano, Adam Doup\'{e}, Yan Shoshitaishvili, Ruoyu Wang, Tiffany Bao, Gail-Joon Ahn.\\
+In \emph{Proceedings of the 2020 ACM SIGSAC Conference on Computer and Communications Security (CCS '20)}.
+\\\\
+Exploiting Uses of Uninitialized Stack Variables in Linux Kernels to Leak Kernel Pointers. \\
+Haehyun Cho, Jinbum Park, Joonwon Kang, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn. \\
+In \emph{the 14th USENIX Workshop on Offensive Technologies (WOOT '20)}.
+\\\\
+Not All Coverage Measurements Are Equal: Fuzzing by Coverage Accounting for Input Prioritization. \\
+Yanhao Wang, Xiangkun Jia, Yuwei Liu, Tiffany Bao, Dinghao Wu, and Purui Su. \\
+In the \emph{Network and Distributed System Security Symposium (NDSS '20)}.
+\\\\
+Scam Pandemic: How Attackers Exploit Public Fear through Phishing. \\
+Marzieh Bitaab, Haehyun Cho, Adam Oest, Penghui Zhang, Zhibo Sun, Rana Pourmohamad, Doowon Kim, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn.
+In \emph{Symposium on Electronic Crime Research (ECrime '20)}.
+\\\\
+%
+Cyber Autonomy in Software Security: Techniques and Tactics (Book Chapter). \\
+Tiffany Bao and Yan Shoshitaishvili. \\
+In \emph{Game Theory and Machine Learning for Cyber Security}.
+\\\\
+Matched and Mismatched SOCs: A Qualitative Study on Security Operations Center Issues. \\
+Faris Bugra Kokulu, Ananta Soneji, Tiffany Bao, Yan Shoshitaishvili, Ziming Zhao, Adam Doupé, and Gail-Joon Ahn. \\
+In \emph{Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Security (CCS '19)}.
+\\\\
+%
+Understanding and Predicting Private Interactions in Underground Forums. \\
+Zhibo Sun, Carlos E. Rubio-Medrano, Ziming Zhao, Tiffany Bao, Adam Doupé, and Gail-Joon Ahn.\\
+In \emph{the 9th ACM Conference on Data and Application Security and Privacy (CODASPY '19)}.
+\\\\
+%%
+%Autonomous Computer Security Game: Techniques, Strategy and Investigation. \\
+%\textbf{Tiffany Bao} \\
+%Doctor of Philosophy Thesis.
+%
+Your Exploit is Mine: Automatic Shellcode Transplant for
+Remote Exploits.\\
+Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, and David
+Brumley.\\
+In \emph{Proceedings of the 38th IEEE Symposium on
+Security and Privacy (Oakland '17)}.
+\\\\
+%
+How Shall We Play a Game: A Game-theoretical Model for
+Cyber-warfare.\\
+Tiffany Bao, Yan Shoshitaishvili, Ruoyu Wang, Christopher Kruegel,
+Giovanni Vigna and David Brumley. \\
+In \emph{Proceedings of the 30th IEEE Computer Security Foundations
+(CSF '17)}. \\
+\textbf{National Security Agency's Annual Scientific Paper Award.}
+\\\\
+%
+Security is a Game. \\
+Tiffany Bao. \\
+In \emph{2017 USENIX Summit on Hot Topics in Security (HotSec '17)}. \\
+\textbf{Awarded Talk.}
+\\\\
+%
+A Game-theoretical Model for Cyber-warfare Games. (Invited
+Poster)\\
+Tiffany Bao, Yan Shoshitaishvili, Ruoyu Wang and David
+Brumley. \\
+In \emph{the 8th Workshop on Computational Cybersecurity in
+Compromised Environments (C3E '16)}.
+\\\\
+%
+ByteWeight: Learning to Recognize Functions in Binary Code.
+\\
+Tiffany Bao, Jonathan Burket, Maverick Woo, Rafael Turner,
+and David Brumley.  \\
+In \emph{Proceedings of the 23rd USENIX Security Symposium
+(USENIX '14)}.
+\\\\
+%
+Type-based Dynamic Taint Analysis Technology. \\
+Libo Chen, Jianwei Zhuge, Fan Tian, Tiffany Bao, and Xun Lu.
+In \emph{Tsinghua Science and Technology Journal}, 2012.
+\\\\
+%
+Research of Technology for Type-based Dynamic Taint Analysis. \\
+Libo Chen, Jianwei Zhuge, Fan Tian, Tiffany Bao, and Xun Lu.
+In \emph{Proceedings of the 5th Conference of Vulnerability Analysis
+and Risk Assessment (VARA '12)}. \\
+\textbf{Outstanding Paper Award.}
+
+%\\\\
+
+%Efficient Crash Triage with Black-box Dependency Inference. \\
+%\textbf{Tiffany Bao}, Thanassis Avgerinos, Gustavo Grieco and David Brumley. \\
+%Submitted for publication.
+%\\\\
+%Primus: Memory Check with Micro Execution. \\
+%Ivan Gotovchits, \textbf{Tiffany Bao} and David Brumley. \\
+%Submitted for publication.
+%\\\\
+%Does IT Make us Secure: A Qualitative Evaluation for Binary Analysis. \\
+%\textbf{Tiffany Bao} and David Brumley. \\
+%To be submitted.
+%\section{Invited Talks}
+
+%How Shall We Play a Game: A Game-theoretical Model for
+%Cyber-warfare. \\
+%2019 Hot Topics in the Science of Security Symposium (HotSoS). \hfill{2019} 
+%\\\\
+%Artificial Intelligence in Cyber Security: Technology and
+%Strategy. \\
+%International Forum For Security Research (InForSec). \hfill{2017}
+%\\\\
+%Artificial Intelligence in Cyber Security: Technology and
+%Strategy. \\
+%Peking University. \hfill{2017}
+%\\\\
+%Exploit Techniques and Strategies. \\
+%CMU CyLab Partners Conference.
+%\hfill{2017}
+%\\\\
+%ShellSwap: Automatic Shellcode Transplant for Remote Exploits. \\
+%Baidu Bay Area Security Forum (BASec).
+%\hfill{2017}
+
+\section{Professional Activities}
+%
+\textbf{Program Committee Member} \\
+Network and Distributed System Security Symposium. \hfill{2019, 2020} \\
+ACM SIGSAC Conference on Computer and Communications Security. \hfill{2020} \\
+International Symposium on Research in Attacks, Intrusions and Defenses. \hfill{2020}
+ACM Workshop on Automotive and Aerial Vehicle
+Security. \hfill{2020} \\
+(Affiliated with the ACM Conference on Data and Application Security and Privacy.) \\
+Network and Distributed System Security Symposium. \hfill{2019} \\
+Annual Computer Security Applications Conference. \hfill{2019} \\
+Workshop on Binary Analysis Research. \hfill{2018, 2019, 2020} \\
+(Affiliated with the Network and Distributed System Security Symposium.) \\
+%
+\\
+%
+\textbf{Journal Reviewer} \\
+ACM Transactions on information and System Security. \\
+Communications of the ACM. \\
+IEEE Transactions on Software Engineering. \\
+IEEE Transactions on Knowledge and Data Engineering.
+\\\\
+\textbf{CTF Game Organizer} \\
+Member of the DEF CON CTF hosting team. \hfill{2019}
+%
+\\\\
+%\textbf{Student Committee Member} \\
+%IEEE Symposium on Security and Privacy. \hfill{2016}
+%\\\\
+%\textbf{External Reviewer} \\
+%The Network and Distributed System Security Symposium.      \hfill{2014}
+%\\
+%The ACM Conference on Computer and Communications Security.  \hfill{2013}
+%\\\\
+\textbf{Mentor} \\
+Google Summer of Code.  \hfill{2013}
+%\\\\
+%\textbf{Contributor} \\
+%\emph{Introduction to Algorithm and Olympiad in Informatics.} \hfill{2011}\\
+%ISBN:9787302291077
+%\\\vspace{-1em}\\
+%\emph{Network Hacking and Defense.}\hfill{2010}\\
+%ISBN: 9787121138027
+
+\section{Selected Awards}
+%
+% \href{http://english.pku.edu.cn/}{Peking University}
+% \begin{innerlist}
+% \item
+% \item Distinguished Student Award, 2008 \& 2009
+% \item Social Worker Award, 2010
+% \end{innerlist}
+National Security Agency's Annual Scientific Paper Award.
+\hfill{2018}
+\\\\
+Awarded Talk at 2017 USENIX Summit on Hot Topics in Security.
+\hfill{2017}
+\\\\
+Carnegie Mellon University Presidential Fellowship.
+\hfill{2017}
+%%\\\\
+%%Second Place at EFF Capture the Flag @ Enigma.
+%%\hfill{2016}
+%\\\\
+%Frank J. Marshall Graduate Fellowship.
+%\hfill{2012}
+%\\\\
+%Zongjie Huo Fellowship.
+%\hfill{2008, 2009}
+
+
+\section{Teaching Experience}
+CSE 365: Introduction to Information Assurance. \hfill{2021} \\
+CSE 545: Software Security. \hfill{2020} \\
+CSE 591: Computer Security: Techniques and Tactics. \hfill{2019} \\
+%\textbf{Head Teaching Assistant.} \\
+%Network Security. (CMU 18-731, for Graduate) \hfill{2015}\\
+%\textbf{Head Teaching Assistant.} \\
+%Introduction to Computer Security. (CMU 18-487, for Undergraduate) \hfill{2016}
+%\\\\
+%\textbf{Instructor for Computing Olympiad.} \hfill{2008}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Professional Experience %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Professional Experience}
+%Research Internship, University of California Santa Barbara.  \hfill{2016}
+%\\\\
+%Research Internship, Tsinghua University.  \hfill{2012}
+%\\\\
+%Member, the Honeynet Project.  \hfill{2011-2013}
+%\\\\
+%Research Assistant, Peking University.  \hfill{2010-2012}
+
+%\section{References}
+%\textbf{Professor David Brumley} \\
+%Carnegie Mellon University \\
+%(412) 268-3851 \\
+%dbrumley@cmu.edu
+%\\\\
+%\textbf{Professor Giovanni Vigna} \\
+%University of California, Santa Barbara \\
+%(805)-637-6382 \\
+%vigna@cs.ucsb.edu
+%\\\\
+%\textbf{Professor Hui Zhang} \\
+%Carnegie Mellon University \\
+%(412) 443-8196 \\
+%hzhang@cs.cmu.edu
+%\\\\
+%\textbf{Professor Wenke Lee} \\
+%Georgia Institute of Technology \\
+%(404) 385-2879 \\
+%wenke.lee@gmail.com
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% End CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
