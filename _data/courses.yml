@@ -1,6 +1,13 @@
+
+- id: CSE365
+  title: Introduction to Information Assurance
+  date: 2022 Spring
+  url: https://cse365.io/
+
 - id: CSE365
   title: Introduction to Information Assurance
   date: 2021 Spring
+  url: https://cse365.io/s21/
 
 - id: CSE545
   title: Software Security
