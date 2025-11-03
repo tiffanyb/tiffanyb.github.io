@@ -39,7 +39,89 @@
   artifacts:
     - name: paper
       location: paper/scammagnifier2025.pdf
+
+- title: "Fuzz to the Future: Uncovering Occluded Future Vulnerabilities via Robust Fuzzing"
+  author: Arvind S Raj, Wil Gibbs, Fangzhou Dong, Jayakrishna Menon Vadayath, Michael Tompkins, Steven Wirsz, Yibo Liu, Zhenghao Hu, Chang Zhu, Gokulkrishna Praveen Menon, Brendan Dolan-Gavitt, Adam Doupé, Ruoyu Wang, Yan Shoshitaishvili, Tiffany Bao.
+  publisher: "Proceedings of the 2024 ACM SIGSAC Conference on Computer and Communications Security (CCS '24)"
+  year: 2024
+  artifacts:
+    - name: paper
+      location: paper/flakjack2024.pdf
+    - name: code
+      url: https://github.com/sefcom/flakjack
+
+- title: "\"Watching over the shoulder of a professional\": Why Hackers Make Mistakes and How They Fix Them"
+  author: Irina Ford, Ananta Soneji, Faris Bugra Kokulu, Jayakrishna Vadayath, Zion Leonahenahe Basque, Gaurav Vipat, Adam Doupé, Ruoyu Wang, Gail-Joon Ahn, Tiffany Bao, Yan Shoshitaishvili.
+  publisher: "Proceedings of the 45th IEEE Symposium on Security and Privacy (Oakland '24)"
+  year: 2024
+  artifacts:
+    - name: paper
+      location: paper/mistake2024.pdf
+
+- title: "TYGR: Type Inference on Stripped Binaries using Graph Neural Networks"
+  author: Chang Zhu, Ziyang Li, Anton Xue, Ati Priya Bajaj, Wil Gibbs, Yibo Liu, Rajeev Alur, Tiffany Bao, Hanjun Dai, Adam Doupé, Mayur Naik, Yan Shoshitaishvili, Ruoyu Wang, Aravind Machiry.
+  publisher: "The 33rd USENIX Security Symposium (USENIX '24)"
+  year: 2024
+  artifacts:
+    - name: paper
+      location: paper/tygr2024.pdf
+    - name: code
+      url: https://github.com/sefcom/TYGR
       
+- title: "Take a step further: understanding page spray in linux kernel exploitation"
+  author: Ziyi Guo, Dang K Le, Zhenpeng Lin, Kyle Zeng, Ruoyu Wang, Tiffany Bao, Yan Shoshitaishvili, Adam Doupé, Xinyu Xing.
+  publisher: "The 33rd USENIX Security Symposium (USENIX '24)"
+  year: 2024
+  artifacts:
+    - name: paper
+      location: paper/pagespray2024.pdf
+
+- title: "Ahoy SAILR! There is No Need to DREAM of C: A Compiler-Aware Structuring Algorithm for Binary Decompilation"
+  author: Zion Leonahenahe Basque, Ati Priya Bajaj, Wil Gibbs, Jude O'Kain, Derron Miao, Tiffany Bao, Adam Doupé, Yan Shoshitaishvili, Ruoyu Wang.
+  publisher: "The 33rd USENIX Security Symposium (USENIX '24)"
+  year: 2024
+  artifacts:
+    - name: paper
+      location: paper/sailr2024.pdf
+    - name: code
+      url: https://github.com/mahaloz/sailr-eval
+
+- title: "Retspill: Igniting user-controlled data to burn away linux kernel protections"
+  author: Kyle Zeng, Zhenpeng Lin, Kangjie Lu, Xinyu Xing, Ruoyu Wang, Adam Doupé, Yan Shoshitaishvili, Tiffany Bao.
+  publisher: "Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security (CCS '23)"
+  year: 2023
+  artifacts:
+    - name: paper
+      location: paper/retspill2023.pdf
+    - name: code
+      url: https://github.com/sefcom/RetSpill
+
+- title: "Beyond Phish: Toward Detecting Fraudulent e-Commerce Websites at Scale"
+  author: Marzieh Bitaab, Haehyun Cho, Adam Oest, Zhuoer Lyu, Wei Wang, Jorij Abraham, Ruoyu Wang, Tiffany Bao, Yan Shoshitaishvili, Adam Doupé.
+  publisher: "Proceedings of the 44th IEEE Symposium on Security and Privacy (Oakland '23)"
+  year: 2023
+  artifacts:
+    - name: paper
+      location: paper/beyondphish2023.pdf
+      
+- title: "Toss a Fault to Your Witcher: Applying Grey-box Coverage-Guided Mutational Fuzzing to Detect SQL and Command Injection Vulnerabilities"
+  author: Erik Trickel, Fabio Pagani, Chang Zhu, Lukas Dresel, Giovanni Vigna, Christopher Kruegel, Ruoyu Wang, Tiffany Bao, Yan Shoshitaishvili, Adam Doupé.
+  publisher: "Proceedings of the 44th IEEE Symposium on Security and Privacy (Oakland '23)"
+  year: 2023
+  artifacts:
+    - name: paper
+      location: paper/witcher2023.pdf
+
+- title: "Greenhouse: Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation"
+  author: Hui Jun Tay, Kyle Zeng, Jayakrishna Menon Vadayath, Arvind S Raj, Audrey Dutcher, Tejesh Reddy, Wil Gibbs, Zion Leonahenahe Basque, Fangzhou Dong, Zack Smith, Adam Doupé, Tiffany Bao, Yan Shoshitaishvili, Ruoyu Wang.
+  publisher: "The 32nd USENIX Security Symposium (USENIX '23)"
+  year: 2023
+  artifacts:
+    - name: paper
+      location: paper/greenhouse2023.pdf
+    - name: code
+      url: https://github.com/sefcom/greenhouse
+
 - title: "Playing for K(H)eaps: Understanding and Improving Linux Kernel Exploit Reliability"
   author: Kyle Zeng, Yueqi Chen, Haehyun Cho, Xinyu Xing, Adam Doupé, Yan Shoshitaishvili, Tiffany Bao.
   publisher: "The 31st USENIX Security Symposium (USENIX '22)"
@@ -65,6 +147,22 @@
   artifacts:
     - name: paper
       location: paper/exploitability2022.pdf
+
+- title: "I'm SPARTACUS, No, I'm SPARTACUS: Proactively Protecting Users from Phishing by Intentionally Triggering Cloaking Behavior"
+  author: Penghui Zhang, Zhibo Sun, Sukwha Kyung, Hans Walter Behrens, Zion Leonahenahe Basque, Haehyun Cho, Adam Oest, Ruoyu Wang, Tiffany Bao, Yan Shoshitaishvili, Gail-Joon Ahn, Adam Doupé.
+  publisher: "Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security (CCS '22)"
+  year: 2022
+  artifacts:
+    - name: paper
+      location: paper/spartacus2022.pdf
+
+- title: "ViK: practical mitigation of temporal memory safety violations through object ID inspection"
+  author: Haehyun Cho, Jinbum Park, Adam Oest, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn.
+  publisher: "Proceedings of the 27th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS '22)"
+  year: 2022
+  artifacts:
+    - name: paper
+      location: paper/vik2022.pdf
 
 - title: "\"Flawed, but like democracy we don't have a better system\": The Experts' Insights on the Peer Review Process of Evaluating Security Papers"
   author: Ananta Soneji, Faris Bugra Kokulu, Carlos Rubio-Medrano, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupe.
