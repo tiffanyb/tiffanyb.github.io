@@ -4,8 +4,10 @@ layout: index
 # Tiffany Bao
 
 
-Assistant Professor at [Arizona State University](https://www.asu.edu)
+Associate Professor at [Arizona State University](https://www.asu.edu)
+
+Associate Director of Research Acceleration, Center for [Cybersecurity & Trusted Foundations](https://ctf.asu.edu/)
 
 Co-Director of the [SEFCOM](https://sefcom.asu.edu/) Lab
 
-A Software Security Researcher and a CTF Fan
+A Security Researcher and CTF Fan

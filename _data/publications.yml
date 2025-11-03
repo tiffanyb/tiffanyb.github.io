@@ -1,5 +1,47 @@
+- title: "Teamwork Makes the Defense Work: Comprehensive Vulnerability Defense Resource Allocation"
+  author: Siyu Liu, Rida Bazzi, Fei Fang, Tiffany Bao.
+  publisher: "Proceedings of the 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS '25)"
+  year: 2025
+  artifacts:
+    - name: paper
+      location: paper/aamas2025.pdf
+    - name: code
+      url: https://github.com/sefcom/SWING
+
+- title: "\"It's almost like Frankenstein\": Investigating the Complexities of Scientific Collaboration and Privilege Management within Research Computing Infrastructures"
+  author: Souradip Nath, Ananta Soneji, Jaejong Baek, Tiffany Bao, Adam Doupé, Carlos Rubio-Medrano, Gail-Joon Ahn.
+  publisher: "Proceedings of the 46th IEEE Symposium on Security and Privacy (Oakland '25)"
+  year: 2025
+  artifacts:
+    - name: paper
+      location: paper/frankenstein2025.pdf
+
+- title: "ScamNet: Toward Explainable Large Language Model-Based Fraudulent Shopping Website Detection"
+  author: Marzieh Bitaab, Alireza Karimi, Zhuoer Lyu, Ahmadreza Mosallanezhad, Adam Oest, Ruoyu Wang, Tiffany Bao, Yan Shoshitaishvili, Adam Doupé.
+  publisher: "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI '25)"
+  year: 2025
+  artifacts:
+    - name: paper
+      location: paper/scamnet2025.pdf
+
+- title: "System Register Hijacking: Compromising Kernel Integrity By Turning System Registers Against the System"
+  author: Jennifer Miller, Manas Ghandat, Kyle Zeng, Hongkai Chen, Abdelouahab Habs Benchikh, Tiffany Bao, Ruoyu Wang, Adam Doupé, Yan Shoshitaishvili.
+  publisher: "The 34th USENIX Security Symposium (USENIX '25)"
+  year: 2025
+  artifacts:
+    - name: paper
+      location: paper/kernel2025.pdf
+
+- title: "SCAMMAGNIFIER: Piercing the Veil of Fraudulent Shopping Website Campaigns"
+  author: Marzieh Bitaab, Alireza Karimi, Zhuoer Lyu, Adam Oest, Dhruv Kuchhal, Muhammad Saad, Gail-Joon Ahn, Ruoyu Wang, Tiffany Bao, Yan Shoshitaishvili, Adam Doupé.
+  publisher: "The Network and Distributed System Security Symposium (NDSS '25)"
+  year: 2025
+  artifacts:
+    - name: paper
+      location: paper/scammagnifier2025.pdf
+      
 - title: "Playing for K(H)eaps: Understanding and Improving Linux Kernel Exploit Reliability"
-  author: Kyle Zeng, Yueqi Chen, Haehyun Cho, Xinyu Xing, Adam Doupe, Yan Shoshitaishvili, Tiffany Bao.
+  author: Kyle Zeng, Yueqi Chen, Haehyun Cho, Xinyu Xing, Adam Doupé, Yan Shoshitaishvili, Tiffany Bao.
   publisher: "The 31st USENIX Security Symposium (USENIX '22)"
   year: 2022
   artifacts:
@@ -26,7 +68,7 @@
 
 - title: "\"Flawed, but like democracy we don't have a better system\": The Experts' Insights on the Peer Review Process of Evaluating Security Papers"
   author: Ananta Soneji, Faris Bugra Kokulu, Carlos Rubio-Medrano, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupe.
-  publisher: "Proceedings of the IEEE Symposium on Security and Privacy (Oakland '22)"
+  publisher: "Proceedings of the 43rd IEEE Symposium on Security and Privacy (Oakland '22)"
   year: 2022
   artifacts:
     - name: paper
@@ -49,7 +91,7 @@
 
 - title: "CrawlPhish: Large-scale Analysis of Client-side Cloaking Techniques in Phishing."
   author: Penghui Zhang, Adam Oest, Haehyun Cho, Zhibo Sun, RC Johnson, Brad Wardman, Shaown Sarker, Alexandros Kapravelos, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupé, Gail-Joon Ahn.
-  publisher: "Proceedings of the 42th IEEE Symposium on Security and Privacy (Oakland '21)"
+  publisher: "Proceedings of the 42nd IEEE Symposium on Security and Privacy (Oakland '21)"
   year: 2021
   award: "Best Student Paper Award"
   artifacts:
