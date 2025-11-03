@@ -5,9 +5,9 @@ title: Research
 
 ## About Me
 
-Tiffany Bao is an Assistant Professor at Arizona State University.
+Tiffany Bao is an Associate Professor at Arizona State University.
 Her research interests are __aspects of software security__, including techniques, measurements, and strategies to discover, assess, and defend software vulnerabilities.
-Tiffany Bao received her Ph.D. at Carnegie Mellon University advised by Prof. [David Brumley](https://users.ece.cmu.edu/~dbrumley/).
+Tiffany Bao received her Ph.D. at Carnegie Mellon University advised by Professor [David Brumley](https://users.ece.cmu.edu/~dbrumley/).
 
 
 ## What are Aspects of Software Security?
