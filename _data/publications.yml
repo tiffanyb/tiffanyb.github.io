@@ -4,7 +4,7 @@
   year: 2025
   artifacts:
     - name: paper
-      location: paper/aamas2025.pdf
+      location: paper/swing2025.pdf
     - name: code
       url: https://github.com/sefcom/SWING
 
