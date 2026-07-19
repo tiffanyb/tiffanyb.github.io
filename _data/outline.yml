@@ -13,8 +13,10 @@
 - name: "Curriculum Vitae"
   location: "cv.pdf"
 
-- name: Student Hiring
-  location: hiring.html
+- name: "Humanoid Security"
+  location: "humanoid.html"
+#- name: Student Hiring
+  #location: hiring.html
 
 - name: Youtube
   url: https://www.youtube.com/channel/UCzKrPYj9UWM29Myu5h5ha-g
