@@ -3,6 +3,7 @@ layout: index
 ---
 # Tiffany Bao
 
+Special Faculty at [Carnegie Mellon University](https://www.cmu.edu/)
 
 Associate Professor at [Arizona State University](https://www.asu.edu)
 
